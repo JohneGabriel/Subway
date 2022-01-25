@@ -78,6 +78,11 @@ body {
   background-color: var(--background-color__headings);
 }
 
+.btn--rewards {
+  border: none;
+  flex-grow: 1;
+}
+
 /* Links */
 .link-text {
   font-weight: 400;
@@ -268,5 +273,87 @@ body {
   .content__section__description p {
     font-size: 1.6rem;
     text-align: center;
+  }
+}
+
+/* Rewards Section */
+/* Rewards Header*/
+.rewards__header {
+  background-color: var(--background-color__article);
+  padding-bottom: 1.5rem;
+  box-shadow: 0 3px 3px #777;
+}
+
+.rewards__header h3 {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.rewards__stars {
+  display: flex;
+  flex-direction: row;
+}
+
+.rewards__stars__number {
+  font-size: 1.9rem;
+}
+
+.rewards__stars__star {
+  color: #cba258;
+  font-size: 1.8rem;
+}
+
+/* Rewards Content */
+.rewards__content {
+  background-color: var(--background-color__content);
+  opacity: 0.92;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.rewards__content img {
+  width: 100%;
+  height: auto;
+}
+
+.rewards__content-description h3 {
+  font-size: 1.9rem;
+}
+
+.rewards__content-description p {
+  font-size: 1.4rem;
+  line-height: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  /* Rewards Header*/
+  .rewards__header h3 {
+    font-size: 2.8rem;
+  }
+
+  .rewards__stars__number {
+    font-size: 2.4rem;
+  }
+
+  /* Rewards Content */
+  .rewards__content {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .rewards__content-description {
+    padding: 0 1.6rem;
+  }
+
+  .rewards__content-description h3 {
+    font-size: 2.4rem;
+  }
+
+  .rewards__content-description p {
+    font-size: 1.6rem;
   }
 }
