@@ -154,7 +154,7 @@ body {
   margin: 16px 0 0 0;
 }
 
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 768px) {
   .hero__heading {
     font-size: 3.6rem;
     text-align: left;
@@ -173,5 +173,100 @@ body {
 
   .hero__link-text {
     font-size: 1.9rem;
+  }
+}
+
+/* Content */
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem 1.6rem;
+}
+
+.content__heading {
+  margin-bottom: 3rem;
+}
+
+.content__heading h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.content__heading p {
+  font-size: 1.6rem;
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+
+.content__section {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 32px;
+}
+
+.content__section__image {
+  width: 48px;
+  height: 48px;
+}
+
+.content__section__description {
+  margin-left: 1.5rem;
+}
+
+.content__section__description h3 {
+  font-size: 1.6rem;
+  margin-top: 0;
+  letter-spacing: 0.5px;
+}
+
+.content__section__description p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .content__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+
+  .content__heading {
+    margin-bottom: 4rem;
+  }
+
+  .content__heading h2 {
+    font-size: 2.8rem;
+  }
+
+  .content__heading p {
+    font-size: 1.6rem;
+  }
+
+  .content__section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content__section__image {
+    margin-bottom: 2.5rem;
+  }
+
+  .content__section__description {
+    margin-left: 1.5rem;
+  }
+
+  .content__section__description h3 {
+    font-size: 1.9rem;
+    text-align: center;
+  }
+
+  .content__section__description p {
+    font-size: 1.6rem;
+    text-align: center;
   }
 }
