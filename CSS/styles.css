@@ -374,3 +374,123 @@ body {
     font-size: 1.6rem;
   }
 }
+
+/* Section Ways to Pay */
+.pay__container {
+  background-color: var(--background-color__headings);
+  padding: 1.6rem;
+}
+
+.pay__header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.pay__header h3 {
+  font-size: 2.4rem;
+  letter-spacing: 0.6px;
+}
+
+.pay__header p {
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+.pay__content {
+  margin: 2.5rem 0;
+}
+
+.pay__content__price {
+  margin-bottom: 3rem;
+}
+
+.price {
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.price__description {
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+}
+
+.pco__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.pay__content__option {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 2.8rem;
+}
+
+.pay__content__option img {
+  width: 112px;
+  height: 158px;
+}
+
+.pco__description {
+  margin-left: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.pco__description h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.pco__description p {
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .pay__header h2 {
+    font-size: 2.8rem;
+  }
+
+  .pay__header p {
+    font-size: 1.6rem;
+  }
+
+  .pay__content {
+    margin: 3.5rem 0;
+  }
+
+  .pay__content__price {
+    margin-bottom: 3rem;
+  }
+
+  .price {
+    font-size: 2.4rem;
+  }
+
+  .price__description {
+    font-size: 1.6rem;
+  }
+
+  .pco__container {
+    flex-direction: row;
+  }
+
+  .pay__content__option {
+    flex: 1;
+    margin-bottom: 2rem;
+  }
+
+  .pco__description h3 {
+    font-size: 1.9rem;
+  }
+
+  .pco__description p {
+    font-size: 1.6rem;
+  }
+
+  .pay__content:last-child {
+    width: 50%;
+  }
+}
