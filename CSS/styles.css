@@ -111,6 +111,23 @@ body {
   letter-spacing: 0.75px;
 }
 
+/* Inputs */
+.inp {
+  border-radius: 5px;
+  padding: 10px 0;
+}
+
+.inp--codes {
+  border: 1px solid #999;
+  background: none;
+  flex-grow: 1;
+  z-index: 1;
+}
+
+.inp--codes:focus {
+  border: 2px solid darkgreen;
+}
+
 /* Hero */
 .hero {
   display: flex;
@@ -493,4 +510,39 @@ body {
   .pay__content:last-child {
     width: 50%;
   }
+}
+
+/* Star Codes Section */
+.codes__header h3 {
+  font-size: 2.4rem;
+}
+
+.codes__header p {
+  font-size: 1.6rem;
+}
+
+.codes__input {
+  display: flex;
+  border-radius: 5px;
+  position: relative;
+}
+
+.codes__input label {
+  color: #000000;
+  font-size: 1.6rem;
+  position: absolute;
+  top: 25%;
+  z-index: 0;
+  padding-left: 12px;
+  text-align: left;
+}
+
+.codes__btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.codes__description p {
+  font-size: 1.4rem;
 }
