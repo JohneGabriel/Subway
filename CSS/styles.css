@@ -513,7 +513,7 @@ body {
 }
 
 /* Star Codes Section */
-.codes__header h3 {
+.codes__header h2 {
   font-size: 2.4rem;
 }
 
@@ -545,4 +545,51 @@ body {
 
 .codes__description p {
   font-size: 1.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .codes {
+    width: 50%;
+    margin-left: 16.6667%;
+  }
+
+  .codes__header h2 {
+    font-size: 2.8rem;
+  }
+
+  .codes__header p {
+    font-size: 1.8rem;
+  }
+
+  .codes__description p {
+    font-size: 1.6rem;
+  }
+}
+
+/* Question Section */
+.questions__container {
+  margin: 128px 0;
+}
+
+.questions__container h2 {
+  font-size: 2.4rem;
+}
+
+.questions__container p {
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .questions__container {
+    width: 50%;
+    margin-left: 16.6667%;
+  }
+
+  .questions__container h2 {
+    font-size: 2.8rem;
+  }
+
+  .questions__container p {
+    font-size: 1.6rem;
+  }
 }
