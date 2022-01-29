@@ -663,3 +663,69 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
+/* Navigation Bar */
+nav {
+  position: fixed;
+}
+
+.nav__container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 1rem 2rem;
+}
+
+.nav__logo img {
+  height: 71px;
+  width: 71px;
+}
+
+.nav__list ul {
+  padding: 0;
+}
+
+.nav__list li {
+  list-style: none;
+  display: inline-block;
+  padding-left: 1.5rem;
+}
+
+.nav__list a {
+  color: #444;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav__links {
+  margin-left: 3.5rem;
+}
+
+.nav__links img {
+  height: 18px;
+  width: 20px;
+  margin-right: 0.2rem;
+}
+
+.link-location {
+  color: #444;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.nav__links button {
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 778px) {
+  nav {
+    display: none;
+  }
+}
