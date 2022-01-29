@@ -643,3 +643,23 @@ body {
     grid-gap: 25px;
   }
 }
+
+/* Banner */
+.banner {
+  background-color: var(--green-darker);
+  box-shadow: 0 0 5px 1px #999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  height: 50px;
+  padding: 0 2rem;
+}
+
+.banner h1 {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
