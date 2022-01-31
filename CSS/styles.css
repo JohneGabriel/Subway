@@ -207,7 +207,13 @@ body {
 .content {
   display: flex;
   flex-direction: column;
-  margin: 4rem 1.6rem;
+  margin: 5rem 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    margin: 10rem 1.6rem;
+  }
 }
 
 .content__heading {
@@ -314,7 +320,7 @@ body {
 /* Rewards Header*/
 .rewards__header {
   background-color: var(--background-color__article);
-  padding-bottom: 1.5rem;
+  padding: 1.8rem 0;
   box-shadow: 0 3px 3px #777;
 }
 
@@ -513,6 +519,11 @@ body {
 }
 
 /* Star Codes Section */
+.codes__container {
+  padding: 0 1.6rem;
+  margin: 72px 0;
+}
+
 .codes__header h2 {
   font-size: 2.4rem;
 }
@@ -540,7 +551,7 @@ body {
 .codes__btn {
   display: flex;
   justify-content: flex-end;
-  margin-top: 2rem;
+  margin-top: 1.6rem;
 }
 
 .codes__description p {
@@ -548,8 +559,9 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .codes {
+  .codes__container {
     width: 50%;
+    margin: 12rem 0;
     margin-left: 16.6667%;
   }
 
@@ -568,7 +580,8 @@ body {
 
 /* Question Section */
 .questions__container {
-  margin: 128px 0;
+  margin-bottom: 7.2rem;
+  padding: 0 1.6rem;
 }
 
 .questions__container h2 {
@@ -582,6 +595,7 @@ body {
 @media screen and (min-width: 768px) {
   .questions__container {
     width: 50%;
+    margin-bottom: 12rem;
     margin-left: 16.6667%;
   }
 
@@ -597,10 +611,11 @@ body {
 /* About Section */
 .section__about {
   background-color: var(--background-color__headings);
+  padding: 2rem 1.6rem;
 }
 
 .about__container {
-  margin: 1rem 0rem;
+  margin-top: 1rem;
 }
 
 .about__item {
@@ -625,7 +640,7 @@ body {
 }
 
 .about__container:last-child {
-  padding-bottom: 1.5rem;
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -647,11 +662,10 @@ body {
 /* Banner */
 .banner {
   background-color: var(--green-darker);
-  box-shadow: 0 0 5px 1px #999;
+  box-shadow: 0 0 2px 1px #999;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
   height: 50px;
   padding: 0 2rem;
 }
@@ -664,11 +678,13 @@ body {
   letter-spacing: 1px;
 }
 
-/* Navigation Bar */
-nav {
-  position: fixed;
+@media screen and (min-width: 768px) {
+  .banner {
+    padding: 0.3rem 2rem;
+  }
 }
 
+/* Navigation Bar */
 .nav__container {
   background-color: #fff;
   display: flex;
