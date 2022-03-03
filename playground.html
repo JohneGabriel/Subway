@@ -10,32 +10,39 @@
     <link rel="stylesheet" href="/CSS/playground.css" />
   </head>
   <body>
-    <nav class="nav">
-      <div class="nav__container">
-        <div class="nav__logo">
-          <a href="/"><img src="/Content/icons/Starbucks.svg" /></a>
+    <section class="section__codes">
+      <div class="codes__container">
+        <div class="codes__header">
+          <h2>Star Codes</h2>
+          <p>
+            Yesssss. You've got Stars in your hand. Enter your code here and
+            we'll add Stars to your account.
+          </p>
         </div>
-        <div class="menu-btn">
-          <div class="menu-btn__burger"></div>
-        </div>
-        <div class="nav-content">
-          <div class="nav__list">
-            <ul>
-              <li><a href="/menu">Menu</a></li>
-              <li><a href="/rewards">Rewards</a></li>
-              <li><a href="/gift">Gift Cards</a></li>
-            </ul>
+        <form action="#">
+          <div class="inp__container">
+            <input
+              type="text"
+              class="inp inp--codes"
+              placeholder="Enter your Star Code"
+            />
           </div>
-          <div class="nav__links">
-            <a href="#" class="link-location"
-              ><img src="/Content/icons/location.svg" />Find a store</a
+          <div class="codes__btn">
+            <button class="btn btn--accent--secondary">Submit</button>
+          </div>
+        </form>
+        <div class="codes__description">
+          <p>Have a receipt but don't have a code?</p>
+          <p>
+            Go to
+            <a href="#" class="link-text link-text--primary"
+              >starbuck-stars.com</a
             >
-            <button class="btn btn--accent--secondary">Sign in</button>
-            <a href="#" class="btn btn--accent">Join now</a>
-          </div>
+            to upload your receipt and collect your Stars.
+          </p>
         </div>
       </div>
-    </nav>
+    </section>
   </body>
   <script src="JS.js"></script>
 </html>

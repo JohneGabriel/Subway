@@ -174,17 +174,6 @@ body {
   padding: 10px 0;
 }
 
-.inp--codes {
-  border: 1px solid #999;
-  background: none;
-  flex-grow: 1;
-  z-index: 1;
-}
-
-.inp--codes:focus {
-  border: 2px solid darkgreen;
-}
-
 /* Hero */
 .hero {
   background-image: url(/Content/images/hero__mobile.jpg);
@@ -595,26 +584,29 @@ body {
   font-size: 1.6rem;
 }
 
-.codes__input {
+.inp__container {
   display: flex;
-  border-radius: 5px;
-  position: relative;
+  width: 100%;
 }
 
-.codes__input label {
-  color: #000000;
-  font-size: 1.6rem;
-  position: absolute;
-  top: 25%;
-  z-index: 0;
-  padding-left: 12px;
-  text-align: left;
+.inp__container input {
+  border: 1px solid #999;
+  background: none;
+  flex-grow: 1;
+  padding-left: 8px;
+  outline: none;
+  transition: all 0.2s ease-in;
+}
+
+.inp__container input:focus {
+  border: 2px solid darkgreen;
 }
 
 .codes__btn {
   display: flex;
   justify-content: flex-end;
   margin-top: 1.6rem;
+  overflow: hidden;
 }
 
 .codes__description p {
