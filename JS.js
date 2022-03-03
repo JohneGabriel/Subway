@@ -17,14 +17,18 @@
 // Burger Menu
 
 const menuBtn = document.querySelector(".menu-btn");
+const navContent = document.querySelector(".nav-content");
 let menuOpen = false;
 
 menuBtn.addEventListener("click", () => {
     if(!menuOpen) {
         menuBtn.classList.add("open");
+        navContent.classList.add("open");
         menuOpen = true;
     } else {
         menuBtn.classList.remove("open");
+        navContent.classList.remove("open");
         menuOpen = false;
     }
 }); 
+

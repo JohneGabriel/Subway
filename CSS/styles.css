@@ -94,9 +94,8 @@ body {
 
 /* Hamburger Menu */
 .menu-btn {
-  background-color: #fff;
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,29 +106,29 @@ body {
 
 .menu-btn__burger {
   background-color: #555;
-  width: 60px;
-  height: 6px;
+  width: 30px;
+  height: 4px;
   border-radius: 15px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-btn__burger::before,
 .menu-btn__burger::after {
   background-color: #555;
   content: "";
-  width: 60px;
-  height: 6px;
+  width: 30px;
+  height: 4px;
   border-radius: 15px;
   position: absolute;
   transition: all 0.5s ease-in-out;
 }
 
 .menu-btn__burger::before {
-  transform: translateY(-16px);
+  transform: translateY(-10px);
 }
 
 .menu-btn__burger::after {
-  transform: translateY(16px);
+  transform: translateY(10px);
 }
 
 /* Hamburger Menu Animations */
@@ -755,11 +754,23 @@ body {
   flex-direction: row;
   align-items: center;
   padding: 1rem 2rem;
+  position: relative;
+}
+
+.nav__container .menu-btn {
+  display: none;
 }
 
 .nav__logo img {
   height: 71px;
   width: 71px;
+}
+
+.nav-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav__list ul {
@@ -779,10 +790,11 @@ body {
   letter-spacing: 1.2px;
   text-transform: uppercase;
   text-decoration: none;
+  transition: all 0.3s ease-out;
 }
 
-.nav__links {
-  margin-left: 3.5rem;
+.nav__list li:hover a {
+  color: var(--green-lighter--hover);
 }
 
 .nav__links img {
@@ -797,6 +809,12 @@ body {
   font-weight: 600;
   text-decoration: none;
   margin-right: 1rem;
+  transition: all 0.3 ease-out;
+  grid-area: link;
+}
+
+.link-location:hover {
+  color: var(--green-lighter);
 }
 
 .nav__links button {
@@ -804,7 +822,89 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  nav {
-    display: none;
+  .nav__container .menu-btn {
+    display: flex;
+    position: absolute;
+    right: 8px;
+  }
+
+  .nav-content {
+    background-color: #fff;
+    position: absolute;
+    padding-left: 3rem;
+    top: 101%;
+    right: 0;
+    width: 60vw;
+    height: calc(100vh - 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    align-items: flex-start;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(10vw);
+    transition: all 0.3s ease-out;
+  }
+
+  .nav-content.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav__list::after {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    content: "";
+    top: 180px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    height: 2px;
+  }
+
+  .nav__list ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav__list li {
+    margin-top: 3rem;
+    float: left;
+    clear: left;
+    padding-left: 0;
+  }
+
+  .nav__list a {
+    color: #444;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: none;
+  }
+
+  .nav__list li:hover a {
+    color: #222;
+  }
+
+  .nav__links {
+    margin-top: 6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      "btn  btn2"
+      "link link";
+    row-gap: 20px;
+  }
+
+  .nav__links button {
+    grid-area: btn;
+  }
+
+  .nav__links a:last-of-type {
+    grid-area: btn2;
   }
 }
