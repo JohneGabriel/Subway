@@ -475,6 +475,16 @@ body {
   margin: 2.5rem 0;
 }
 
+.sh::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 3px;
+  display: flex;
+  position: relative;
+  bottom: 15px;
+}
+
 .pay__content__price {
   margin-bottom: 3rem;
 }
@@ -500,7 +510,6 @@ body {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  margin-bottom: 2.8rem;
 }
 
 .pay__content__option img {
