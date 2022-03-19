@@ -1,0 +1,50 @@
+/*.rs__option::after{
+    content: "";
+    background: var(--green-darker);
+    border-radius: 100px;
+    width: 90%;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(8px);
+    opacity: 0;
+    transition: all 0.2s ease-in;
+}
+
+.rs__option::after.sl {
+    transform: translateY(0);
+    opacity: 1;
+}
+ .rs__option:hover.rs__option::after {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.sl {
+    background-color: var(--green-darker);
+    height: 3px;
+    width: 90%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+} */
+
+.vs {
+    content: "";
+    background: var(--green-darker);
+    border-radius: 100px;
+    width: 90%;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(8px);
+    opacity: 0;
+    transition: all 0.15s ease-in;
+}
+
+.rs__option.sl .vs {
+    transform: translateY(0);
+    opacity: 1;
+}
