@@ -1,18 +1,7 @@
-const feHeader = document.querySelectorAll(".fe__header");
-const feContent = document.querySelectorAll(".fe__content");
+const footerEl = document.querySelectorAll(".footer-el");
 
-feHeader.forEach(heading => {
-    heading.addEventListener("click", () => {
-        heading.classList.toggle("extended");
-        feContent.forEach(item => {
-            item.classList.toggle("extended");
-        });
+footerEl.forEach(el => {
+    el.addEventListener("click", () => {
+        el.classList.toggle("extended");
     });
 });
-
-// feHeader.forEach(heading => {
-//         heading.addEventListener("click", () => {
-//             heading.classList.toggle("extended");
-
-//         });
-//     });
