@@ -23,12 +23,26 @@ menuBtn.addEventListener("click", () => {
         menuBtn.classList.add("open");
         navContent.classList.add("open");
         menuOpen = true;
+        prevent();
     } else {
         menuBtn.classList.remove("open");
         navContent.classList.remove("open");
         menuOpen = false;
+        prevent()
     }
 }); 
+
+// Prevent Scroll
+const body = document.querySelector("body");
+const contentOpen = document.querySelector(".nav-content");
+function prevent() {
+    if(contentOpen.classList.contains("open")) {
+        body.style.overflow = "hidden";
+    }
+    else {
+        body.style.overflow = "auto";
+    }
+}
 
 // Rewards
 
@@ -97,4 +111,3 @@ footerEl.forEach(el => {
         el.classList.toggle("extended");
     });
 });
-
