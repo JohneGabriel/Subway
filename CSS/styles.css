@@ -368,12 +368,14 @@ body {
 /* Rewards Section */
 .rewards__container {
   min-width: 300px;
+  width: 100%;
   overflow: hidden;
 }
 
 /* Rewards Header*/
 .rewards__header {
   background-color: var(--background-color__article);
+  width: 100%;
   padding: 1.8rem 0 0 0;
   display: flex;
   flex-direction: column;
@@ -387,38 +389,32 @@ body {
   font-weight: 600;
 }
 
+.rewards__stars__number {
+  font-size: 1.6rem;
+}
+
+.rewards__stars__star {
+  color: #cba258;
+}
+
 .rewards__stars {
-  min-width: 768px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
-.rs__option {
-  position: relative;
-  width: 101px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.r-option {
   cursor: pointer;
   position: relative;
-  padding: 0.6rem 2rem
+  padding: 0.6rem 2rem;
+  border-bottom: 4px solid transparent;
+  border-radius: 2px;
+  transition: all .3s ease-out;
 }
 
-.r-option.sl::after {
-  content: "";
-  background-color: var(--green-lighter);
-  border-radius: 100px;
-  width: 100%;
-  height: 4px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
-.rs__option:last-child {
-  margin-right: 0;
+.r-option.sl {
+  border-bottom: 2px solid var(--green-lighter);
 }
 
 .btn--rewards {
@@ -442,13 +438,33 @@ body {
 }
 
 /* Rewards Content */
-.rewards__content {
+.rewards__content-background {
   background-color: var(--background-color__content);
-  opacity: 0.92;
+  width: 100%;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rewards__content {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 3rem 0;
+  padding-bottom: 0.2rem;
+  max-height: 0;
+  max-width: 500px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease-out;
+  overflow: hidden;
+}
+
+.rewards__content.vs {
+  max-height: fit-content;
+  visibility: visible;
+  opacity: 1;
 }
 
 .rewards__content img {
@@ -462,24 +478,39 @@ body {
 
 .rewards__content-description p {
   font-size: 1.4rem;
+  font-weight: 400;
   line-height: 24px;
 }
 
 @media screen and (min-width: 768px) {
   /* Rewards Header*/
+  .rewards__stars {
+    max-width: 540px;
+  }
+
   .rewards__header h3 {
     font-size: 2.8rem;
   }
 
   .rewards__stars__number {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 
   /* Rewards Content */
+  .rewards__content-background {
+    padding: 3rem;
+  }
+
   .rewards__content {
+    max-width: 830px;
     flex-direction: row;
     align-items: center;
     text-align: left;
+  }
+
+  .rc-image {
+    max-width: 375px;
+    max-height: 211px;
   }
 
   .rewards__content-description {
